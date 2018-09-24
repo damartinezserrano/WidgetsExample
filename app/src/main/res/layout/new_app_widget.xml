@@ -1,0 +1,236 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#09C"
+    android:padding="@dimen/widget_margin">
+
+
+
+
+    <TextView
+        android:id="@+id/applabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apliaciones :"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
+        android:drawableStart="@drawable/app_icon"
+        android:drawablePadding="5dp"
+        />
+
+    <ViewFlipper
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inAnimation="@android:anim/fade_in"
+        android:outAnimation="@android:anim/fade_out"
+        android:flipInterval="5000"
+        android:autoStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_toEndOf="@+id/applabel"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="7dp">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:text="App1"/>
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:text="App2"/>
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:text="App3"/>
+
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:text="App4"/>
+
+        <TextView
+            android:id="@+id/tv5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:text="App5"/>
+
+    </ViewFlipper>
+
+<RelativeLayout
+    android:id="@+id/modelwrap"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="5dp">
+
+    <TextView
+        android:id="@+id/modellabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Modelo :"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
+        android:drawableStart="@drawable/celicon"
+        android:drawablePadding="5dp"
+        />
+
+    <TextView
+        android:id="@+id/modeldesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="#09C"
+        android:text="model desc"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:textStyle="bold|italic"
+        android:layout_toEndOf="@+id/modellabel"/>
+
+</RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ubicwrap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/modelwrap">
+
+        <TextView
+            android:id="@+id/ubiclabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ubicacion :"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:drawableStart="@drawable/ubichdpi"
+            android:drawablePadding="5dp"
+            />
+
+        <TextView
+            android:id="@+id/ubicdesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="#09C"
+            android:text="ubic desc"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:textStyle="bold|italic"
+            android:layout_toEndOf="@+id/ubiclabel"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/wifiwrap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/ubicwrap">
+
+        <TextView
+            android:id="@+id/wifilabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wifi :"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:drawableStart="@drawable/wifi_icon"
+            android:drawablePadding="5dp"
+            />
+
+        <TextView
+            android:id="@+id/wifidesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="#09C"
+            android:text="wifi desc"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:textStyle="bold|italic"
+            android:layout_toEndOf="@+id/wifilabel"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/controlwrap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wifiwrap"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/updatebtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Device Info"
+                android:drawableStart="@drawable/config_icon"
+               />
+
+            <Button
+                android:id="@+id/appbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="APP"
+                android:textAlignment="center"
+                android:drawableStart="@drawable/android_icon"
+                />
+
+            <Button
+                android:id="@+id/wifibtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wifi"
+                android:drawableStart="@drawable/wifi_icon"
+
+                />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>
