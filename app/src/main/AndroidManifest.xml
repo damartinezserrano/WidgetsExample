@@ -26,6 +26,7 @@
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
                 <action android:name="MY_WIDGET_BUTTON" />
                 <action android:name="MY_WIFI_BUTTON" />
+                <action android:name="MY_APP_BUTTON" />
             </intent-filter>
 
             <meta-data

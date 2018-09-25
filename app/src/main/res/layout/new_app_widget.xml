@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#09C"
+    android:background="@color/rojoClaro"
     android:padding="@dimen/widget_margin">
 
 
@@ -22,6 +22,7 @@
         />
 
     <ViewFlipper
+        android:id="@+id/flipv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inAnimation="@android:anim/fade_in"
@@ -101,7 +102,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:background="#09C"
         android:text="model desc"
         android:textColor="#ffffff"
         android:textSize="24sp"
@@ -137,7 +137,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:background="#09C"
             android:text="ubic desc"
             android:textColor="#ffffff"
             android:textSize="24sp"
@@ -173,7 +172,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:background="#09C"
             android:text="wifi desc"
             android:textColor="#ffffff"
             android:textSize="24sp"
@@ -189,13 +187,15 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/wifiwrap"
         android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:layout_marginTop="10dp"
         >
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
 
 
             <Button
@@ -204,6 +204,7 @@
                 android:layout_height="wrap_content"
                 android:text="Device Info"
                 android:drawableStart="@drawable/config_icon"
+                android:background="@color/colorPrimary"
                />
 
             <Button
@@ -213,6 +214,8 @@
                 android:text="APP"
                 android:textAlignment="center"
                 android:drawableStart="@drawable/android_icon"
+                android:background="@color/colorPrimary"
+                android:layout_marginStart="5dp"
                 />
 
             <Button
@@ -221,7 +224,8 @@
                 android:layout_height="wrap_content"
                 android:text="Wifi"
                 android:drawableStart="@drawable/wifi_icon"
-
+                android:background="@color/colorPrimary"
+                android:layout_marginStart="5dp"
                 />
 
         </LinearLayout>
