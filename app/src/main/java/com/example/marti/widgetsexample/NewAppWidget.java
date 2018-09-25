@@ -20,9 +20,9 @@ public class NewAppWidget extends AppWidgetProvider {
 
     static RemoteViews views;
     static int[] idArray;
-    static String[] appsArray;
+    //static String[] appsArray;
     static int thisWidgetId;
-    public static String WIDGET_BUTTON = "MY_WIDGET_BUTTON";
+   // public static String WIDGET_BUTTON = "MY_WIDGET_BUTTON";
     public static String WIFI_BUTTON = "MY_WIFI_BUTTON";
     public static String APP_BUTTON = "MY_APP_BUTTON";
 
@@ -32,13 +32,13 @@ public class NewAppWidget extends AppWidgetProvider {
 
         thisWidgetId = appWidgetId; //id de este widget
         idArray = new int[]{appWidgetId};
-        appsArray = new String[]{"Whatsapp","Facebook","Twitter","Clash of Clans","Feedly"};
+        //appsArray = new String[]{"Whatsapp","Facebook","Twitter","Clash of Clans","Feedly"};
 
         //intent para el receiver del boton
-        Intent intentUpdate = new Intent(context,NewAppWidget.class);
+       /* Intent intentUpdate = new Intent(context,NewAppWidget.class);
         intentUpdate.setAction(WIDGET_BUTTON);
         intentUpdate.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID,idArray);
-        PendingIntent pendingUpdate = PendingIntent.getBroadcast(context,appWidgetId,intentUpdate,PendingIntent.FLAG_UPDATE_CURRENT);
+        PendingIntent pendingUpdate = PendingIntent.getBroadcast(context,appWidgetId,intentUpdate,PendingIntent.FLAG_UPDATE_CURRENT);*/
 
         Intent intentWifi = new Intent(context,NewAppWidget.class);
         intentWifi.setAction(WIFI_BUTTON);
@@ -56,14 +56,14 @@ public class NewAppWidget extends AppWidgetProvider {
         // Construct the RemoteViews object
         views = new RemoteViews(context.getPackageName(), R.layout.new_app_widget);
 
-        views.setTextViewText(R.id.tv1, appsArray[0]);
+        /*views.setTextViewText(R.id.tv1, appsArray[0]);
         views.setTextViewText(R.id.tv2, appsArray[1]);
         views.setTextViewText(R.id.tv3, appsArray[2]);
         views.setTextViewText(R.id.tv4, appsArray[3]);
-        views.setTextViewText(R.id.tv5, appsArray[4]);
+        views.setTextViewText(R.id.tv5, appsArray[4]);*/
 
         // reconocimiento de el click boton y lanzamiento de el pending intent
-        views.setOnClickPendingIntent(R.id.updatebtn,pendingUpdate);
+        //views.setOnClickPendingIntent(R.id.updatebtn,pendingUpdate);
         views.setOnClickPendingIntent(R.id.wifibtn,pendingWifi);
         views.setOnClickPendingIntent(R.id.appbtn,pendingApp);
 
@@ -71,17 +71,15 @@ public class NewAppWidget extends AppWidgetProvider {
         views.setTextViewText(R.id.ubicdesc, "Barranquilla");
         WifiManager wifiManager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
         if(wifiManager.isWifiEnabled()){
-            wifiManager.setWifiEnabled(false);
-            views.setTextViewText(R.id.wifidesc, "OFF");
-            views.setTextColor(R.id.wifidesc,context.getResources().getColor(R.color.black));
-        }else{
-            wifiManager.setWifiEnabled(true);
             views.setTextViewText(R.id.wifidesc, "ON");
             views.setTextColor(R.id.wifidesc,context.getResources().getColor(R.color.darkGreenColor));
+        }else{
+            views.setTextViewText(R.id.wifidesc, "OFF");
+            views.setTextColor(R.id.wifidesc,context.getResources().getColor(R.color.black));
         }
 
       // Control Resize
-        int ancho = appWidgetManager.getAppWidgetOptions(appWidgetId).getInt (AppWidgetManager.OPTION_APPWIDGET_MIN_WIDTH);
+       /* int ancho = appWidgetManager.getAppWidgetOptions(appWidgetId).getInt (AppWidgetManager.OPTION_APPWIDGET_MIN_WIDTH);
         if(ancho<180){
             views.setViewVisibility(R.id.modelwrap, View.GONE);
             views.setViewVisibility(R.id.ubicwrap, View.GONE);
@@ -98,7 +96,7 @@ public class NewAppWidget extends AppWidgetProvider {
             views.setViewVisibility(R.id.flipv, View.VISIBLE);
             views.setViewVisibility(R.id.wifibtn, View.VISIBLE);
             views.setViewVisibility(R.id.updatebtn, View.VISIBLE);
-        }
+        }*/
 
         // Instruct the widget manager to update the widget
         appWidgetManager.updateAppWidget(appWidgetId, views);
@@ -129,12 +127,12 @@ public class NewAppWidget extends AppWidgetProvider {
         AppWidgetManager appWidgetManager = AppWidgetManager
                 .getInstance(context);
 
-        if(WIDGET_BUTTON.equals(intent.getAction())){
+       /* if(WIDGET_BUTTON.equals(intent.getAction())){
 
             Intent i = new Intent(Settings.ACTION_DEVICE_INFO_SETTINGS);
             context.startActivity(i);
 
-        }else{
+        }else{*/
 
             if(WIFI_BUTTON.equals(intent.getAction())){
                 views = new RemoteViews(context.getPackageName(), R.layout.new_app_widget);
@@ -156,7 +154,7 @@ public class NewAppWidget extends AppWidgetProvider {
                     context.startActivity(i);
                 }
             }
-        }
+      //  }
 
     }
 
@@ -164,7 +162,7 @@ public class NewAppWidget extends AppWidgetProvider {
     public void onAppWidgetOptionsChanged(Context context, AppWidgetManager appWidgetManager, int appWidgetId, Bundle newOptions) {
         super.onAppWidgetOptionsChanged(context, appWidgetManager, appWidgetId, newOptions);
 
-        int width2 = appWidgetManager.getAppWidgetOptions(appWidgetId).getInt (AppWidgetManager.OPTION_APPWIDGET_MIN_WIDTH);
+       /* int width2 = appWidgetManager.getAppWidgetOptions(appWidgetId).getInt (AppWidgetManager.OPTION_APPWIDGET_MIN_WIDTH);
         int height2 = appWidgetManager.getAppWidgetOptions(appWidgetId).getInt (AppWidgetManager.OPTION_APPWIDGET_MIN_HEIGHT);
 
         Log.i("minwidth ",String.valueOf(width2));
@@ -194,7 +192,7 @@ public class NewAppWidget extends AppWidgetProvider {
             views.setViewVisibility(R.id.updatebtn, View.VISIBLE);
         }
 
-        appWidgetManager.updateAppWidget(appWidgetId, views);
+        appWidgetManager.updateAppWidget(appWidgetId, views);*/
 
     }
 }

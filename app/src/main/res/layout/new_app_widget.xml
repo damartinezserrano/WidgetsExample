@@ -7,7 +7,7 @@
 
 
 
-    <TextView
+   <!-- <TextView
         android:id="@+id/applabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,57 +25,54 @@
         android:id="@+id/flipv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inAnimation="@android:anim/fade_in"
-        android:outAnimation="@android:anim/fade_out"
-        android:flipInterval="5000"
-        android:autoStart="true"
+        android:layout_alignBottom="@+id/applabel"
         android:layout_centerHorizontal="true"
-        android:layout_toEndOf="@+id/applabel"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="7dp">
+        android:autoStart="true"
+        android:flipInterval="5000"
+        android:inAnimation="@android:anim/fade_in"
+        android:outAnimation="@android:anim/fade_out">
 
         <TextView
             android:id="@+id/tv1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="App1"
             android:textColor="#ffffff"
-            android:textSize="20sp"
-            android:text="App1"/>
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/tv2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="App2"
             android:textColor="#ffffff"
-            android:textSize="20sp"
-            android:text="App2"/>
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/tv3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="App3"
             android:textColor="#ffffff"
-            android:textSize="20sp"
-            android:text="App3"/>
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/tv4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="App4"
             android:textColor="#ffffff"
-            android:textSize="20sp"
-            android:text="App4"/>
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/tv5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="App5"
             android:textColor="#ffffff"
-            android:textSize="20sp"
-            android:text="App5"/>
+            android:textSize="20sp" />
 
-    </ViewFlipper>
+    </ViewFlipper>-->
 
 <RelativeLayout
     android:id="@+id/modelwrap"
@@ -198,14 +195,14 @@
             android:gravity="center_vertical">
 
 
-            <Button
+           <!-- <Button
                 android:id="@+id/updatebtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Device Info"
                 android:drawableStart="@drawable/config_icon"
                 android:background="@color/colorPrimary"
-               />
+               />-->
 
             <Button
                 android:id="@+id/appbtn"
